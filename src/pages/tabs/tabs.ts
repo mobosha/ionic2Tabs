@@ -19,8 +19,7 @@ export class TabsPage {
   }
 
   //页面已经进入
-  ionViewDidEnter(){ 
-    //console.log("ionViewDidEnter");     
+  ionViewDidEnter(){      
     let mainTabs = this.tabRef; 
     mainTabs.select(1); 
   }
