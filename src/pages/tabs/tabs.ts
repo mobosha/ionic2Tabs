@@ -18,13 +18,30 @@ export class TabsPage {
     
   }
 
+  ionViewWillEnter() {
+    // Let's navigate from TabsPage to Page1
+    console.log('ionViewWillEnter');
+  }
+
+  ngAfterViewInit() {
+    // Let's navigate from TabsPage to Page1
+    console.log('ngAfterViewInit');
+  }
+
   //页面已经进入
-  ionViewDidEnter(){      
+  ionViewDidEnter(){ 
+    console.log('ionViewDidEnter');     
     let mainTabs = this.tabRef; 
     mainTabs.select(1); 
   }
 
+  ionViewDidLoad() {
+    console.log("ionViewDidLoad");
+  }
   
+  ionViewCanEnter(){
+    console.log("ionViewCanEnter");
+  }
  
   
 

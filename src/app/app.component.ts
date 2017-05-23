@@ -19,4 +19,9 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+
+  ngOnInit(){
+    console.log("ngOnInit");
+
+  }
 }

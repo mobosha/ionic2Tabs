@@ -1,0 +1,22 @@
+<ion-toolbar color="primary">
+    <ion-title>用户注册</ion-title>
+    <ion-buttons start>  <!--ios 和 安卓 以及windows 系统会根据不同系统调整取消按钮的位置 安卓和windows的显示在右边，ios的会显示在左侧 -->
+        <button ion-button (click)="dismiss()">
+            <span>取消</span>
+        </button>
+    </ion-buttons>
+</ion-toolbar>
+
+    
+<ion-content padding class="marginTop50">
+    <ion-list>
+        <ion-item *ngFor="let contact of contacts; let i = index;" (click)="itemClick($event, contact)"> <!--trackBy: trackBy(id); let isEven = even; let isFirst = first; left isLast = last;-->
+            <ion-avatar item-left>
+                <img src="../images/{{contact.id}}.png" alt="">
+            </ion-avatar>
+            <h2>{{contact.name}}{{i}}</h2>   <!--||{{i}}||{{isEven}}||{{isFirst}}||{{isLast}}-->
+            <p>{{contact.text}}</p>
+        </ion-item>
+        
+    </ion-list>
+</ion-content>
